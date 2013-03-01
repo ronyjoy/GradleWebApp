@@ -1,0 +1,127 @@
+!SESSION 2013-02-28 12:29:44.137 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_15
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product -data C:\dev\GradleApp\phonebook -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.mylyn.tasks.ui 4 0 2013-02-28 12:29:47.826
+!MESSAGE Could not load repository template extension contributed by org.springsource.ide.eclipse.dashboard.ui with connectorKind jira
+
+!ENTRY org.eclipse.mylyn.tasks.ui 4 0 2013-02-28 12:29:47.826
+!MESSAGE Could not load repository template extension contributed by org.springsource.ide.eclipse.dashboard.ui with connectorKind jira
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 0 0 2013-02-28 12:29:51.876
+!MESSAGE Result of converting legacy STS 2.x workspace preferences to 3.x
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2013-02-28 12:29:51.876
+!MESSAGE Converted legacy STS plugin preferences
+!SUBENTRY 1 unknown 0 0 2013-02-28 12:29:51.876
+!MESSAGE OK
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2013-02-28 12:29:51.876
+!MESSAGE Converted legacy Roo plugin state locations
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2013-02-28 12:29:51.876
+!MESSAGE Converted legacy STS plugin state locations
+
+!ENTRY org.springsource.ide.eclipse.gradle.core 1 0 2013-02-28 12:30:05.165
+!MESSAGE Gradle workspace preferences migrated to 3.0.0 format
+
+!ENTRY org.springsource.ide.eclipse.gradle.core 4 0 2013-02-28 12:30:33.646
+!MESSAGE services.gradle.org
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.springsource.ide.eclipse.gradle.core.util.GradleRunnable.run(GradleRunnable.java:93)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: org.eclipse.core.runtime.CoreException: services.gradle.org
+	at org.springsource.ide.eclipse.gradle.core.GradleModelProvider$GroupedModelProvider.ensureModels(GradleModelProvider.java:277)
+	at org.springsource.ide.eclipse.gradle.core.GradleProject.getGradleModel(GradleProject.java:604)
+	at org.springsource.ide.eclipse.gradle.core.GradleProject.getSkeletalGradleModel(GradleProject.java:625)
+	at org.springsource.ide.eclipse.gradle.ui.wizards.GradleImportWizardPageOne$11.doit(GradleImportWizardPageOne.java:514)
+	at org.springsource.ide.eclipse.gradle.core.util.GradleRunnable.run(GradleRunnable.java:85)
+	... 1 more
+Caused by: org.gradle.tooling.GradleConnectionException: Could not install Gradle distribution from 'http://services.gradle.org/distributions/gradle-1.2-bin.zip'.
+	at org.gradle.tooling.internal.consumer.DistributionFactory$ZippedDistribution.getToolingImplementationClasspath(DistributionFactory.java:112)
+	at org.gradle.tooling.internal.consumer.loader.CachingToolingImplementationLoader.create(CachingToolingImplementationLoader.java:36)
+	at org.gradle.tooling.internal.consumer.loader.SynchronizedToolingImplementationLoader.create(SynchronizedToolingImplementationLoader.java:43)
+	at org.gradle.tooling.internal.consumer.connection.LazyConnection.onStartAction(LazyConnection.java:122)
+	at org.gradle.tooling.internal.consumer.connection.LazyConnection.withConnection(LazyConnection.java:105)
+	at org.gradle.tooling.internal.consumer.connection.LazyConnection.run(LazyConnection.java:96)
+	at org.gradle.tooling.internal.consumer.connection.ProgressLoggingConnection$1.run(ProgressLoggingConnection.java:57)
+	at org.gradle.tooling.internal.consumer.connection.ProgressLoggingConnection.run(ProgressLoggingConnection.java:71)
+	at org.gradle.tooling.internal.consumer.connection.ProgressLoggingConnection.run(ProgressLoggingConnection.java:55)
+	at org.gradle.tooling.internal.consumer.connection.LoggingInitializerConnection.run(LoggingInitializerConnection.java:52)
+	at org.gradle.tooling.internal.consumer.async.DefaultAsyncConnection$1.run(DefaultAsyncConnection.java:51)
+	at org.gradle.tooling.internal.consumer.async.DefaultAsyncConnection$2.run(DefaultAsyncConnection.java:69)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:66)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.UnknownHostException: services.gradle.org
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at org.gradle.wrapper.Download.downloadInternal(Download.java:63)
+	at org.gradle.wrapper.Download.download(Download.java:49)
+	at org.gradle.tooling.internal.consumer.DistributionFactory$ProgressReportingDownload.download(DistributionFactory.java:132)
+	at org.gradle.wrapper.Install.createDist(Install.java:51)
+	at org.gradle.tooling.internal.consumer.DistributionFactory$ZippedDistribution.getToolingImplementationClasspath(DistributionFactory.java:108)
+	... 15 more
+Root exception:
+org.eclipse.core.runtime.CoreException: services.gradle.org
+	at org.springsource.ide.eclipse.gradle.core.GradleModelProvider$GroupedModelProvider.ensureModels(GradleModelProvider.java:277)
+	at org.springsource.ide.eclipse.gradle.core.GradleProject.getGradleModel(GradleProject.java:604)
+	at org.springsource.ide.eclipse.gradle.core.GradleProject.getSkeletalGradleModel(GradleProject.java:625)
+	at org.springsource.ide.eclipse.gradle.ui.wizards.GradleImportWizardPageOne$11.doit(GradleImportWizardPageOne.java:514)
+	at org.springsource.ide.eclipse.gradle.core.util.GradleRunnable.run(GradleRunnable.java:85)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: org.gradle.tooling.GradleConnectionException: Could not install Gradle distribution from 'http://services.gradle.org/distributions/gradle-1.2-bin.zip'.
+	at org.gradle.tooling.internal.consumer.DistributionFactory$ZippedDistribution.getToolingImplementationClasspath(DistributionFactory.java:112)
+	at org.gradle.tooling.internal.consumer.loader.CachingToolingImplementationLoader.create(CachingToolingImplementationLoader.java:36)
+	at org.gradle.tooling.internal.consumer.loader.SynchronizedToolingImplementationLoader.create(SynchronizedToolingImplementationLoader.java:43)
+	at org.gradle.tooling.internal.consumer.connection.LazyConnection.onStartAction(LazyConnection.java:122)
+	at org.gradle.tooling.internal.consumer.connection.LazyConnection.withConnection(LazyConnection.java:105)
+	at org.gradle.tooling.internal.consumer.connection.LazyConnection.run(LazyConnection.java:96)
+	at org.gradle.tooling.internal.consumer.connection.ProgressLoggingConnection$1.run(ProgressLoggingConnection.java:57)
+	at org.gradle.tooling.internal.consumer.connection.ProgressLoggingConnection.run(ProgressLoggingConnection.java:71)
+	at org.gradle.tooling.internal.consumer.connection.ProgressLoggingConnection.run(ProgressLoggingConnection.java:55)
+	at org.gradle.tooling.internal.consumer.connection.LoggingInitializerConnection.run(LoggingInitializerConnection.java:52)
+	at org.gradle.tooling.internal.consumer.async.DefaultAsyncConnection$1.run(DefaultAsyncConnection.java:51)
+	at org.gradle.tooling.internal.consumer.async.DefaultAsyncConnection$2.run(DefaultAsyncConnection.java:69)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:66)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.UnknownHostException: services.gradle.org
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at org.gradle.wrapper.Download.downloadInternal(Download.java:63)
+	at org.gradle.wrapper.Download.download(Download.java:49)
+	at org.gradle.tooling.internal.consumer.DistributionFactory$ProgressReportingDownload.download(DistributionFactory.java:132)
+	at org.gradle.wrapper.Install.createDist(Install.java:51)
+	at org.gradle.tooling.internal.consumer.DistributionFactory$ZippedDistribution.getToolingImplementationClasspath(DistributionFactory.java:108)
+	... 15 more

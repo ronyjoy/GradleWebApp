@@ -1,0 +1,9 @@
+#com.springsource.sts.gradle.core.preferences.GradleImportPreferences
+#Fri Mar 01 09:43:28 EST 2013
+enableAfterTasks=true
+afterTasks=afterEclipseImport;
+enableDependendencyManagement=true
+enableBeforeTasks=true
+projects=;
+enableDSLD=true
+beforeTasks=cleanEclipse;eclipse;

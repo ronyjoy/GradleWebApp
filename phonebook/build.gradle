@@ -1,0 +1,24 @@
+sourceCompatibility = 1.6
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'eclipse'
+
+repositories {
+        maven {
+        url "http://maven.nwie.net/enterprise"
+    }
+}
+
+dependencies {
+       testCompile 'junit:junit:4.8.1'
+       compile group: 'javax.servlet', name: 'servlet-api', version: '2.5' 
+       compile group: 'org.json', name:'json',version:'20090211'
+       compile group: 'com.google.code.gson', name: 'gson', version:'2.2.2'
+}
+
+task deployToTomcat(dependsOn: 'war') << {
+    copy {
+        from war.archivePath
+        into "C:/dev/tomcat7/apache-tomcat-7.0.27/webapps"
+    }
+}
