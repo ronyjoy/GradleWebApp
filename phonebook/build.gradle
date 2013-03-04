@@ -4,9 +4,7 @@ apply plugin: 'jetty'
 apply plugin: 'eclipse'
 
 repositories {
-        maven {
-        url "http://maven.nwie.net/enterprise"
-    }
+         mavenCentral()
 }
 
 dependencies {
@@ -16,9 +14,9 @@ dependencies {
        compile group: 'com.google.code.gson', name: 'gson', version:'2.2.2'
 }
 
-task deployToTomcat(dependsOn: 'war') << {
+task deploy(dependsOn: 'war') << {
     copy {
         from war.archivePath
-        into "C:/dev/tomcat7/apache-tomcat-7.0.27/webapps"
+        into "/Users/ronyjoy/documents/server/tomcat/webapps"
     }
 }
